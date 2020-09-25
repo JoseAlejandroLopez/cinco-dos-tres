@@ -1,0 +1,11 @@
+-Logo de la empresa.
+-Icono de WhatsApp (link) que lleve al chat de la empresa
+-Carrousel de imágenes/videos.
+-Menú de navegación.
+-Vista o página: para armar pedido y enviarlo al WhatsApp de empresa.
+-Botón: "quiero que me llamen".
+-Vista: que contenga información compacta de la empresa.
+-Página: que contenga información extensa de la empresa (about us).
+-Página: para productos y descripción.
+
+**La mayoría de estos ítems son para el maquetado incial en desktop. Algunos quedarán para la versión final mobile.
