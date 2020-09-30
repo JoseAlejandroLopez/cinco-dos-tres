@@ -2,14 +2,8 @@ window.addEventListener('load', () => {
    var semana = ['dilluns','dimarts','dimecres','dijous','divendres'];
    console.log(semana[semana.length-4]);
 
-    let x = 0;
-    for(let i=5; i < 20; i++) {
-        x = i;
-    }
-    console.log(x);
-
     if(5 == '5') {
-        console.log('Estabas en lo correcto :]');
+        console.log('Estás en lo correcto :]');
     }
 
     const a = [1,3,5,7,9];
@@ -25,4 +19,10 @@ window.addEventListener('load', () => {
     }else {
         console.log('False');
     }
+
+/*     let callMeButton = document.getElementById('call-me-button');
+    
+    callMeButton.addEventListener('click', (ev) => {
+        document.getElementById('user-info').classList.remove('non-visible');
+    }) */
 });

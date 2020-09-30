@@ -9,21 +9,83 @@
 
         <!-- Estilos CSS -->
         <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/jpg" href="./assets/img/5dos3-icon.jpg">
         <!-- Scrtips -->
         <script type="text/javascript" src="js/index.js"></script>
+        <script src="https://kit.fontawesome.com/fd7513f8d4.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="global-container">
-            <header>
-                <h1>Pizzería 5DOS3</h1>
+
+            <header id="header">
+                <h1>Pizzas a la Piedra</h1>
+                <a href="./index.html"><img id="logo"src="./assets/img/5dos3-icon.jpg" alt="Logo de Pizzeria Cinco Dos Tres"></a>
+                <p>+56 934833840</p>
                 <nav>
-                    <a href="#">Inicio</a>
-                    <a href="./deals.html">Promociones</a>
-                    <a href="./products.html">Productos</a>
-                    <a href="./about.html">Sobre Nosotros</a>
-                    <a href="./registration.html">Regístrate</a>
+                    <a href="#" class="menu-option">Inicio</a>
+                    <a href="./menu.html" class="menu-option">Menú</a>
+                    <a href="./deals.html" class="menu-option">Promociones</a>
+                    <a href="./about.html" class="menu-option">Sobre Nosotros</a>
+                    <a href="./registration.html" class="menu-option">Regístrate</a>
                 </nav>
             </header>
+
+            <main id="main">
+                <div id="content">
+                    <article class="articles">
+                        <img src="./assets/img/banner-2.jpg" alt="Imagen: en cinco dos tres ya abrimos #PizzaTime">
+                        <blockquote>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sequi quam facere nemo harum laudantium est amet quis. Iure temporibus voluptate facere non, eum recusandae?
+                        </blockquote>
+                    </article>
+                    <article class="articles">
+                        <img src="./assets/img/banner-1.jpg" alt="Imagen: nuestras pizzas son hechas en piedra refractaria">
+                        <blockquote>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sequi quam facere nemo harum laudantium est amet quis. Iure temporibus voluptate facere non, eum recusandae?
+                        </blockquote>
+                    </article>
+                    <article class="articles">
+                        <img src="./assets/img/hours.jpg" alt="Horario de la pizzería">
+                        <blockquote>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore sequi quam facere nemo harum laudantium est amet quis. Iure temporibus voluptate facere non, eum recusandae?
+                        </blockquote>
+                    </article>
+                </div>
+
+                <aside id="aside">
+                    <div id="contact-me">
+                        <p class="highlighted bold"><span> ¿Necesitas ayuda para pedir?</span></p><br>
+                        <p>Deja tus datos y te contactaremos</p>
+                        <form id="user-info" class="non-visible forms" action="#">
+                            <label for="first-name">Nombres:</label>
+                            <input type="text" name="first-name" id="first-name" class="input-form" required>
+                            <label for="last-name">Apellidos:</label>
+                            <input type="text" name="last-name" id="last-name" class="input-form" required>
+                            <label for="phone-number">Teléfono:</label>
+                            <input type="number" name="phone-number" id="phone-number" class="input-form" required>
+                            <input type="submit" value ="Quiero que me llamen" id="call-me-button" class="button"></input>
+                        </form>
+                    </div>
+
+                        <div id="map">
+                           <h4 class="highlighted bold"><span>Consulta nuestro rango de delivery</span></h4>
+                           <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1KRfD7TUch_HyGqD32xtN4xFJhJ6nIE2S"></iframe>
+                       </div>
+                </aside>
+            </main>
+
+            
+            
+            <footer id="footer">
+                <a href="Wspp link: bit.ly/3cj5Zci" target="_blank"><i class="fab fa-whatsapp"></i>
+                    <a href="https://www.facebook.com/pizzas.cincodostres.7" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/5dos3/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <p>Derechos Reservados ©2020</p>
+                <p>Sitio web desarrollado por: <a href="https://www.linkedin.com/in/jose-lopez-dev/" target="_blank"> José Alejandro López</a></p>
+            </footer>
+
         </div>
     </body>
 </html>

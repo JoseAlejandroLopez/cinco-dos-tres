@@ -1,9 +1,12 @@
+**  SPA versión final**
+
 1. Página: principal con...
     1.1. Logo de la empresa.
     1.2. Icono de WhatsApp (link) que lleve al chat de la empresa.
     1.3. Menú de navegación.
     1.4. Botón: "quiero que me llamen".
     1.5. Vista: que contenga información compacta de la empresa.
+    1.6. Google Maps con radio de cobertura.
      
 2. Página: que contenga promociones [Slider de imágenes/videos].
 

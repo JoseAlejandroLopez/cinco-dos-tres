@@ -1,21 +1,515 @@
-header {
-    margin: 3em;
+/* Bascic configs 
+ ....................*/
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
+body {
+    background-color: #fff;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.highlighted {
+    background-color: rgb(29, 151, 192);
+}
+
+blockquote, span {
+    quotes: "«" "»" '"' '"';
+  }
+
+/* Grid
+....................*/
+#global-container {
+    width: 100%;
+    background-color: rgb(186, 188, 180);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header"
+                         "main"
+                         "footer";
+    grid-gap: 2em;
+}
+
+/* Header
+....................*/
+#header {
+    grid-area: header;
+    background-color: rgb(33, 188, 246);
+    width: 100%;
     text-align: center;
+}
+
+#logo {
+    width: 6em;
+    height: 6em;
+    margin-top: 1em;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 900;
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+header p {
     color: #fff;
-    background-color: cornflowerblue;
+    margin: 1em auto 2em auto;
+    font-weight: lighter;
 }
 
 nav {
-    background-color: cornflowerblue;
+    margin-top: .7em;
+    background-color: rgb(29, 151, 192);
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-nav a:link, a:visited {
-    color: black;
+.menu-option {
+    text-decoration: none;
+    color: white;
+    padding: .7em 3em;
+    font-size: 1.2em;
+    flex-grow: 1;
+    transition: 222ms;
+}
+
+nav a:hover {
+    background-color: rgb(33, 188, 246);
+}
+
+/* Main
+....................*/
+#main {
+    grid-area: main;
+    width: 100%;
+    padding: .8em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#content {
+    width: 45%;
+    margin: 1.5em 2em;
+    padding: .5em;
+    background-color: #fff;
+    border-radius: 1em;
+}
+
+.articles {
+    margin: 1em auto;
+    text-align: center;
+}
+
+.articles img {
+    Width: 100%;
+    max-width: 30em;
+    height: 16.89em;
+    border-radius: 1em;
+}
+
+.articles blockquote {
+    width: 70%;
+    margin: .5em auto 1.5em;
+}
+
+
+/* Aside
+....................*/
+#aside {
+    width: 30%;
+    margin: 1.5em 2em;
+    padding: 1.5em;
+    border-radius: 1em;
+    background-color: #fff;
+}
+
+#contact-me p {
+    text-align: center;
+}
+
+#contact-me span, #map span {
+    background-color: #fff;
+    padding: 0 .5em;
+}
+
+#call-me-button {
+    font-size: 1.05em;
+}
+
+/* .non-visible {
+    display: none;
+} */
+
+#map {
+    margin: 2.5em auto;
+    text-align: center;
+}
+
+#map iframe {
+    width: 100%;
+    max-width: 20em;
+    height: 16em;
+    margin-top: 1em;
+    border: 0;
+    border-radius: 1em;
+}
+
+/* Footer
+....................*/
+#footer {
+    grid-area: footer;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    padding: .7em;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: lighter;
+    padding: 0 .2em;
+    transition: 222ms;
+}
+
+footer p {
+    margin: 1em auto;
+}
+
+footer i:hover {
+    color: rgb(33, 188, 246);
+    transform:scale(1.4)
+}
+
+/* Forms
+....................*/
+.forms {
+    width: 80%;
+    margin: 1em auto;
+    padding: 1em;
+    background-color: rgb(186, 188, 180);
+    border-radius: 1em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.input-form {
+    width: 100%;
+    margin: .7em auto;
+    padding: .3em;
+    border-radius: .5em;;
+    border: 0;
+    outline-style: none;
+}
+
+label {
+    width: 30%;
+}
+
+.button {
+    align-self: center;
+    margin-top: .3em;
+    width: auto;
+    max-width: 100%;
+    padding: .8em 1em;
+    border: 0;
+    border-radius: 1em;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(29, 151, 192);
+    font-weight: bold;
+    transition: 222ms;
+    -webkit-transition:all 222ms ease;
+    -moz-transition:all 222ms ease;
+    -o-transition:all 222ms ease;
+    -ms-transition:all 222ms ease;
+}
+
+.button:hover {
+    background-color: rgb(33, 188, 246);
+    transform:scale(1.1);
+}
+
+/* Registrarion Page
+====================*/
+#registration-container, 
+#about-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+#registration-container img,
+#about-container img {
+    width: 50%;
+    margin-top: -2em;
+}
+
+#register,
+#about-message {
+    width: 50%;
+}
+
+#register h2 {
+    text-align: center;
+    margin-top: 2em;
+}
+
+#register-form {
+    width: 50%;
+}
+
+#register-form input {
+    padding: 1em;
+    font-size: 1.1em;
+}
+
+/* Menu Page
+====================*/
+
+.subtitle {
+    font-style: italic;
+    font-weight: bolder;
+    margin-top: 2em;
+    text-align: center;
+}
+
+#menu-container {
+    width: 100%;
+    max-width: 70em;
+    min-width: 18em;
+    margin: 2em auto;
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    width: 18em;
+    height: 18em;
+    margin: 1.5em;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 84%;
+    margin-bottom: .5em;
+    flex-shrink: 0;
+    border-radius: 1em;
+}
+
+#menu-container .menu-description {
+    font-style: italic;
+    text-align: center;
+}
+
+/* Deals Page
+====================*/
+#deals-container {
+    margin: 2em auto;
+    background-color: #fff;
+    width: 100%;
+    max-width: 49em;
+    padding: 2em;
+}
+
+#deals-container ul,
+.slider li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slider {
+    width: 49em;
+    height: 27.31em;
+    position: relative;
+}
+
+.slider li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: 500ms;
+}
+
+.slider img {
+    width: 45em;
+    height: 25.31em;
+    object-fit: cover;
+}
+
+.slider li:first-child {
+    opacity: 1;
+}
+
+.slider li:target {
+    opacity: 1;
+}
+
+.slider-menu {
+    text-align: center;
+}
+.slider-menu li {
+    display: inline-block;
+}
+
+.slider-menu a {
     text-decoration: none;
 }
+
+/* About Page
+====================*/
+#about-message blockquote{
+    font-size: 1.5em;
+    padding: 2em;
+    font-style: italic;
+}
+
+#about-message blockquote:before { content: open-quote; }
+
+#about-message blockquote:after  { content: close-quote; }
+
+#about-message p {
+    margin-left: 3em;
+}
+
+/* Responsive and Media Queries
+....................*/
+
+/* Desktop 
+====================*/
+@media screen and (max-width: 928px) {
+    body {font-size: 14px;}
+
+    #aside {width: 40%;}
+}
+
+/* Tablet 
+====================*/
+@media screen and (max-width: 768px) {
+    body {font-size: 16px;}
+
+    #main {
+        width: 100%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #content, 
+    #aside {width: 80%;}
+
+    #registration-container, 
+    #about-container {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
+    
+    #registration-container img,
+    #about-container img {
+        width: 100%;
+        margin-top: -2em;
+    }
+
+    #register,
+    #about-message {
+        width: 100%;
+}
+
+}
+
+/* Mobile 
+====================*/
+@media screen and (max-width: 576px) {
+    #global-container {background-color: #fff;}
+    
+    #nav {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .menu-option {
+        width: 100%;
+    }
+
+    #main {
+        margin: -2em 0;
+        padding: 0;
+    }
+
+    #content, 
+    #aside {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    #deals-container {margin: 0;}
+
+    ul.slider {
+        width: 100%;
+        height: 18em;
+        position: relative;
+    }
+
+    .slider li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: inherit;
+        height: inherit;
+        transition: 500ms;
+    }
+
+    .slider img {
+        width: 100%;
+        height: 18em;
+        object-fit: cover;
+    }
+
+    .slider-menu {
+        position: relative;
+        top: 2em;
+    }
+
+}
+
+
+/* Colores 
+....................
+blue: rgb(29, 151, 192);
+light-blue: rgb(33, 188, 246);
+gray: rgb(104, 104, 103);
+light-gray: rgb(186, 188, 180);
+
+Wspp link: bit.ly/3cj5Zci
+*/
